@@ -9,9 +9,25 @@
         #markdown{
             margin-top: 10px;
         }
+        .bg{
+            position: absolute; 
+            height: 100%; 
+            width: 100%; 
+            margin-top: 10px;
+            background-image: url(https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            /* filter: blur(20px); */
+            z-index: -1;
+
+        }
+        .container{
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(8px); 
+        }
+    
     </style>
 </head>
 <body>
+    <div class="bg"></div>
     <div class="container">
         <h1 class="mb-2"><%=article.title%></h1>
         <div class="text-muted mb-2">

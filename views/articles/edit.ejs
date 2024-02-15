@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-position: 8%;
+            background-image: url(https://plus.unsplash.com/premium_photo-1664110691129-ca0f4fbe8533?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+        .border {
+          box-shadow: inset;
+          border: 2px solid black;
+          border-radius: 10px;
+          padding: 10px;
+        }
+        .border{
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(8px); 
+        }
+    </style>
     <title>Blog Website</title>
 </head>
 <body>
     <div class="container">
-        <h1 class="mb-4">Edit Article</h1>
+        <h1 class="mb-4" style="text-align: center;">Edit Article</h1>
+        <div class="border">
         <form action="/articles/<%=article.id%>?_method=PUT" method="POST">
             <%- include('form_field') %>
         </form>
-
+    </div>
     </div>
 </body>
 </html>
